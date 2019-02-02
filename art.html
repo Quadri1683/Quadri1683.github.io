@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drawing Project</title>
+    <script>
+        let a;
+
+        function animation()
+        {
+            a = requestAnimationFrame(animation);
+            drawBackground();
+            drawBeach();
+            drawOcean();
+            moveWave();
+            moveSun();
+            moveLightning();
+            moveSand();
+            moveFlash();
+        }
+        function startAnimation()
+        {
+            animation();
+        }
+        function stopAnimation()
+        {
+            cancelAnimationFrame(a);
+        }
+
+        var back = "#308dff";
+
+        function drawBackground()
+        {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle = back;
+            ctx.fillRect(0,0,window.innerWidth, window.innerHeight);
+            if (SunX < 400)
+            {
+                back = "#308dff";
+            }
+            if (SunX > 400)
+            {
+                back = "#ff812b";
+            }
+            if (SunX > 700)
+            {
+                back = "#000132"
+            }
+        }
+
+        function drawBeach()
+        {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle = "#ffdf98";
+            ctx.fillRect(0,350,800,100);
+        }
+        function drawOcean()
+        {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle = "#1b34ff";
+            ctx.fillRect(0,250,800,100);
+        }
+        var moveAmountX = 5;
+        var WaveX = 0;
+        function moveWave()
+        {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle = "#1b34ff";
+            ctx.fillRect(WaveX,200,20,50);
+            WaveX = WaveX + moveAmountX;
+            checkWave();
+        }
+        function checkWave()
+        {
+            if (WaveX < 0)
+            {
+                moveAmountX = moveAmountX*(-1.045);
+            }
+            if (WaveX > 780)
+            {
+                moveAmountX = moveAmountX*(-1.045);
+            }
+        }
+        var sandX = 0;
+        var sandAmountX = 5;
+        function moveSand()
+        {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle = "#ffdf98";
+            ctx.fillRect(sandX,330,20,20);
+            sandX = sandX + sandAmountX;
+            checkSand();
+        }
+        function checkSand()
+        {
+            if (sandX > 780)
+            {
+                sandAmountX = sandAmountX*(-1.055);
+            }
+            if (sandX < 0)
+            {
+                sandAmountX = sandAmountX*(-1.055);
+            }
+        }
+        var SunX = 10;
+        var moveSunX = 3;
+        var Sun = "#fff61a";
+        function moveSun()
+        {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(SunX,20,90,0,2*Math.PI);
+            ctx.fillStyle = Sun;
+            ctx.fill();
+            ctx.stroke();
+            SunX = SunX + moveSunX;
+
+            if (SunX < 700)
+            {
+                Sun = "#fff61a"
+            }
+            else if (SunX > 700)
+            {
+                Sun = "#f8ffce"
+            }
+            checkSun();
+        }
+
+        function checkSun()
+        {
+            if(SunX > 790)
+            {
+                moveSunX = moveSunX*(-1);
+            }
+            if (SunX < 10)
+            {
+                moveSunX = moveSunX*(-1);
+            }
+
+        }
+        var pic1 = new Image();
+        pic1.src = "img/flash.png";
+        var flashX = 100;
+        var flashAmount = 5;
+        function moveFlash()
+        {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.drawImage(pic1,flashX,200,130,180);
+            flashX = flashX + flashAmount;
+            checkFlash();
+        }
+        function checkFlash()
+        {
+            if (flashX > 735)
+            {
+                flashAmount = flashAmount*(-1.05);
+            }
+            if (flashX < 0)
+            {
+                flashAmount = flashAmount*(-1.05);
+            }
+        }
+        var lightX = 0;
+        var movelightX = 5;
+        function moveLightning()
+        {
+            lightX = lightX + movelightX;
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle = "#ffce00";
+            ctx.fillRect(lightX,225,150,8);
+            ctx.fillStyle = "#ffce00";
+            ctx.fillRect(lightX,250,150,8);
+            ctx.fillStyle = "#ffce00";
+            ctx.fillRect(lightX,275,150,8);
+            ctx.fillStyle = "#ffce00";
+            ctx.fillRect(lightX,300,150,8);
+            ctx.fillStyle = "#ffce00";
+            ctx.fillRect(lightX,325,150,8);
+            ctx.fillStyle = "#ffce00";
+            ctx.fillRect(lightX,350,150,8);
+            checkLightning();
+        }
+        function checkLightning()
+        {
+            if (lightX < -30)
+            {
+                movelightX = movelightX*(-1.05);
+            }
+            if (lightX > 700)
+            {
+                movelightX = movelightX*(-1.05);
+            }
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="art.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body onload="animation()">
+<ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="family.html">Family</a></li>
+    <li><a href="hobbies.html">Hobbies</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="Q&A.html">Q&A</a></li>
+    <li><a href="miniProjects.html">Mini Projects</a></li>
+    <li><a href="Binary.html">Binary</a></li>
+    <li><a href="calculator.html">Calculator</a></li>
+    <li><a href="Madlib.html">Mad Libs</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="art.html">Animation</a></li>
+</ul>
+<br><br><br>
+<canvas id="myCanvas" width="800" height="450"></canvas>
+<br>
+<button type="button" onclick="stopAnimation()">Stop</button>
+<br>
+<button type="button" onclick="startAnimation()">Start</button>
+<br>
+</body>
+</html>
+

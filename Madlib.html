@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MadLibs</title>
+    <script src="MadlibsScript.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="madLibs.css">
+</head>
+<body>
+<ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="family.html">Family</a></li>
+    <li><a href="hobbies.html">Hobbies</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="Q&A.html">Q&A</a></li>
+    <li><a href="miniProjects.html">Mini Projects</a></li>
+    <li><a href="Binary.html">Binary</a></li>
+    <li><a href="calculator.html">Calculator</a></li>
+    <li><a href="Madlib.html">Mad Libs</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="art.html">Animation</a></li>
+</ul>
+<br><br>
+<form name="StoryRep">
+    <div align="center">
+        <h1>Mad Libs Project</h1>
+        Name = <input name="input1" type="text" placeholder="Type Here">
+        <br><br>
+        Your Name = <input name="input2" type="text" placeholder="Type Here">
+        <br><br>
+        Adjective = <input name="input3" type="text" placeholder="Type Here">
+        <br><br>
+        Number = <input name="input4" type="text" placeholder="Type Here">
+        <br><br>
+        Object = <input name="input5" type="text" placeholder="Type Here">
+        <br><br>
+        Verb Ending in ING = <input name="input6" type="text" placeholder="Type Here">
+        <br><br>
+        Cat Breed 1 = <input name="input7" type="text" placeholder="Type Here">
+        <br><br>
+        Cat Breed 2 = <input name="input8" type="text" placeholder="Type Here">
+        <br><br>
+        City = <input name="input9" type="text" placeholder="Type Here">
+        <br><br>
+        Food = <input name="input10" type="text" placeholder="Type Here">
+        <br><br>
+        <button type="button" onclick="document.getElementById('story').innerHTML=ReplaceWord()">Make A Story</button>
+    </div>
+    <p id="story"></p>
+</form>
+</body>
+</html>

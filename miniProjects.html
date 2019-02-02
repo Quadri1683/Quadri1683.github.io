@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Mini Projects</title>
+    <script src="javaScript mini project.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="minProjects.css">
+</head>
+<body>
+
+<ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="family.html">Family</a></li>
+    <li><a href="hobbies.html">Hobbies</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="Q&A.html">Q&A</a></li>
+    <li><a href="miniProjects.html">Mini Projects</a></li>
+    <li><a href="Binary.html">Binary</a></li>
+    <li><a href="calculator.html">Calculator</a></li>
+    <li><a href="Madlib.html">Mad Libs</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="art.html">Animation</a></li>
+</ul>
+<br>
+<br>
+<form name="GradeConverter">
+    <h4>Grade Calculator</h4>
+    <input type="text" name="percent" placeholder="Type percentile here..">
+    <button type="button" onclick="document.GradeConverter.result.value=letterGrade()">Convert</button>
+    <br><br>
+    <input type="text" name="result" readonly="readonly" placeholder="Grade letter is...">
+</form>
+
+<form name="TemperatureBug">
+    <h4>Temperature Bug</h4>
+    <input type="text" name="num1" placeholder="Type temperature here...">°F
+    <br><br>
+    <div class="container">
+        <div class="centered">
+    <button type="button" onclick="document.TemperatureBug.result.value=Temperature()">Change</button>
+    <br><br>
+    Result: <input name="result" type="text" readonly="true" style="size: 180px">
+            <br><br><br>
+    </div>
+    </div>
+    <br>
+    <style>
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;}
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <div class="container">
+    <img src="img/picture%20frame.png" id="frame" height="480" width="720">
+        <div class="centered">Season Image</div>
+    </div>
+    <!--div idea came from w3schools.com//-->
+</form>
+
+<form name="FitnessTracker">
+    <h4>Calorie Counter</h4>
+    <select id="list">
+        <option value="walking">Walking</option>
+        <option value="running">Running</option>
+        <option value="soccer">Soccer</option>
+        <option value="basketball">Basketball</option>
+        <option value="tennis">Tennis</option>
+        <option value="swimming">Swimming</option>
+        <option value="badminton">Badminton</option>
+        <option value="baseball">Baseball</option>
+        <option value="pingpong">PingPong</option>
+        <option value="hockey">Hockey</option>
+        <option value="sitting">Sitting</option>
+        <option value="standing">Standing</option>
+        <option value="sleeping">Sleeping</option>
+        <option value="lacrosse">Lacrosse</option>
+        <option value="cycling">Cycling</option>
+        <option value="gaming">Gaming</option>
+        <option value="cricket">Cricket</option>
+        <option value="gymnastics">Gymnastics</option>
+        <option value="weight lifting">Weight Lifting</option>
+        <option value="martial arts">Martial Arts</option>
+        <option value="golf">Golf</option>
+        <option value="rollerblading">Rollerblading</option>
+        <option value="ice skating">Ice Skating</option>
+        <option value="football">Football</option>
+        <option value="surfing">Surfing</option>
+        <option value="climbing">Climbing</option>
+        <option value="canoeing">Canoeing</option>
+        <option value="dodgeball">Dodgeball</option>
+        <option value="wrestling">Wrestling</option>
+        <option value="volleyball">Volleyball</option>
+        <option value="archery">Archery</option>
+        <option value="boxing">Boxing</option>
+        <option value="judo">Judo</option>
+        <option value="sledding">Sledding</option>
+        <option value="fishing">Fishing</option>
+        <option value="water polo">Water Polo</option>
+        <option value="yoga">Yoga</option>
+        <option value="trampoline jumping">Trampoline Jumping</option>'
+        <option value="diving">Diving</option>
+        <option value="kickball">Kickball</option>
+        <option value="bowling">Bowling</option>
+    </select>
+    <br>
+    <input id="time" type="text" placeholder="Type minutes here">
+    <button type="button" onclick="FitnessTracker.result.value=CalorieCounter()">Click</button>
+    <br>
+    <input name="result" readonly="readonly">Calories
+    <img src="img/border.png" id="border" height="480" width="720">
+</form>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<form>
+
+</form>
+</body>
+</html>

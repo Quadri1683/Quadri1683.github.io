@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geography Quiz</title>
+    <script src="quizScript.js"></script>
+    <link href="index.css" rel="stylesheet">
+    <link href="quiz.css" rel="stylesheet">
+</head>
+<body>
+<ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="family.html">Family</a></li>
+    <li><a href="hobbies.html">Hobbies</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="Q&A.html">Q&A</a></li>
+    <li><a href="miniProjects.html">Mini Projects</a></li>
+    <li><a href="Binary.html">Binary</a></li>
+    <li><a href="calculator.html">Calculator</a></li>
+    <li><a href="Madlib.html">Mad Libs</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="art.html">Animation</a></li>
+</ul>
+<form name="Quiz">
+    <br><br><br>
+    <img src="img/United States.jpg" height="270" width="480"/>
+    <br><br>
+    Question 1: What Country is This?
+    <input type="text" name="a1">
+    <br><br>
+    Question 2: Approximately how many people live in the world in 2018?
+    <br><br>
+    <input type="radio" name="a2" value="7 Billion">7 Billion<br>
+    <input type="radio" name="a2" value="7.7 Billion">7.7 Billion<br>
+    <input type="radio" name="a2" value="6 Billion">6 Billion<br>
+    <input type="radio" name="a2" value="10.1 Billion">10.1 Billion<br>
+    <br><br>
+    Question 3: Which 2 animals are extinct in the U.S.?
+    <br><br>
+    <input type="checkbox" name="a3A" value="Saber-Toothed Cat">Saber-Toothed Cat<br>
+    <input type="checkbox" name="a3B" value="Cheetah">Cheetah<br>
+    <input type="checkbox" name="a3C" value="Western Horse">Western Horse<br>
+    <input type="checkbox" name="a3D" value="Jaguar">Jaguar<br>
+    <input type="checkbox" name="a3E" value="Mountain Lion">Mountain Lion<br>
+    <br>
+    Question 4: Which country has the largest population?
+    <br><br>
+    <input type="radio" name="a4" value="United States">United States<br>
+    <input type="radio" name="a4" value="China">China<br>
+    <input type="radio" name="a4" value="India">India<br>
+    <input type="radio" name="a4" value="Russia">Russia<br>
+    <br>
+    Question 5: What is the capital of The United States of America?
+    <br><br>
+    <input type="text" name="a5">
+    <br><br>
+    <img src="img/nighttime.jpg" height="600" width="600"/>
+    <br><br>
+    Question 6: Which of these are constellations? Choose all that apply.
+    <br><br>
+    <input type="checkbox" name="a6A" value="Orion">Orion<br>
+    <input type="checkbox" name="a6B" value="Ursa Major">Ursa Major<br>
+    <input type="checkbox" name="a6C" value="Ursa Minor">Ursa Minor<br>
+    <input type="checkbox" name="a6D" value="Night">Night<br>
+    <input type="checkbox" name="a6E" value="Ursa">Ursa<br>
+    <input type="checkbox" name="a6F" value="Arase">Arase<br>
+    <br>
+    Question 7: There are 49 States in the U.S.
+    <br><br>
+    <input type="radio" name="a7" value="True">True<br>
+    <input type="radio" name="a7" value="False">False<br>
+    <br><br>
+    <img src="img/earth.jpg" height="576" width="576">
+    <br><br>
+    Question 8: What percent of Earth's Surface is water?
+    <br><br>
+    <input type="radio" name="a8" value="73">75%<br>
+    <input type="radio" name="a8" value="71">70%<br>
+    <input type="radio" name="a8" value="68">65%<br>
+    <input type="radio" name="a8" value="75">75%<br>
+    <br><br>
+    <button type="button" onclick="document.getElementById('check').innerHTML=checkAnswers()">Submit</button>
+    <br><br>
+    <p id="check"></p>
+</form>
+</body>
+</html>

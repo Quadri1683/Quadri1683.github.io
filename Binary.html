@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert Number Bases</title>
+    <script src="BinaryScript.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="binary.css">
+</head>
+<body>
+<ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="family.html">Family</a></li>
+    <li><a href="hobbies.html">Hobbies</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="Q&A.html">Q&A</a></li>
+    <li><a href="miniProjects.html">Mini Projects</a></li>
+    <li><a href="Binary.html">Binary</a></li>
+    <li><a href="calculator.html">Calculator</a></li>
+    <li><a href="Madlib.html">Mad Libs</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+</ul>
+<br><br><br>
+<form name="toBinary">
+    <h2>Base 10 to Base 2</h2>
+    <input type="text" name="bin">
+    <input type="text" name="result">
+    <button type="button" onclick="document.toBinary.result.value=tenToSmall()">Convert</button>
+</form>
+
+<form name="toTen">
+    <h2>Base 2 to Base 10</h2>
+    <input type="text" name="binary">
+    <input type="text" name="result">
+    <button type="button" onclick="document.toTen.result.value=smallToTen()">binaryTo10</button>
+</form>
+
+<form name="XtoY">
+    <h2>XtoY</h2>
+    <input type="text" name="number" placeholder="Any Number">
+    <br><br>
+    <input type="text" name="base" placeholder="Any Base">
+    <br><br>
+    <input type="text" name="Dbase" placeholder="Desired Base">
+    <br><br>
+    <button type="button" onclick="document.XtoY.result.value=NumConvert()">XtoY Convert</button>
+    <br>
+    <input type="text" name="result" placeholder="Result">
+</form>
+
+</body>
+</html>

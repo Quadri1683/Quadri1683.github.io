@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Education</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="education.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+<ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="family.html">Family</a></li>
+    <li><a href="hobbies.html">Hobbies</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="Q&A.html">Q&A</a></li>
+    <li><a href="miniProjects.html">Mini Projects</a></li>
+    <li><a href="Binary.html">Binary</a></li>
+    <li><a href="calculator.html">Calculator</a></li>
+    <li><a href="Madlib.html">Mad Libs</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="art.html">Animation</a></li>
+</ul>
+<script>
+    function newDoc() {
+        window.location.assign("https://adc.d211.org/Domain/12")
+    }
+</script>
+<style>
+    .mySlides {display:none;}
+</style>
+<br>
+<br>
+<div class="w3-container">
+    <h1 style="font-size: 30px">
+        Elementary
+    </h1>
+    <p>
+        From pre-school to first grade I was mostly jumping around schools ranging from Armstrong as a preschooler to Hoover as<br>
+        a kindergartner, and going to MacArthur as a 1st grader. The rest of my Elementary education was spent<br>
+        at John Muir Literacy Academy from 2nd grade to 6th grade ending my first segment of education.<br>
+    </p>
+
+<div class="w3-content w3-section" style="max-width:500px">
+    <img class="mySlides w3-animate-top" src="img/armstrong.JPG" height="400" width="500">
+    <img class="mySlides w3-animate-bottom" src="img/hoover.JPG" height="400" width="500">
+    <img class="mySlides w3-animate-top" src="img/Macarthar.JPG" height="400" width="500">
+    <img class="mySlides w3-animate-bottom" src="img/john%20muir.JPG" height="400" width="500">
+</div>
+<script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 2500);
+    }
+</script>
+<!-- thanks w3schools code used-->
+<h2 style="font-size: 30px">
+    Middle School
+</h2>
+<p>
+    After my elementary years were behind me I graduated to Eisenhower Junior High School for 7th to 8th grade.<br>
+    During these two years I learned how to prepare for my coming years of education and made many life long<br>
+    friends along the way.
+<p style="font-size: 25px">To learn more about district 54 <a href="https://sd54.org/schools">Click Here</a>
+</p>
+<h3 style="font-size: 30px">
+    HighSchool
+</h3>
+<p>
+    Currently I am enrolled at Hoffman Estates High School as the Freshman the class of 2022. Now I am required to take<br>
+    classes like math, reading, freshman wellness, and science. As my electives I am taking AP Seminar,<br>
+    Engine Power, and currently making this website in  AP Computer Science taught byMr.Krzankowski. At first I<br>
+    thought that high school was a hard and daunting task in my life but really it's a pretty cool place to attend<br>
+    school at. Bellow I have posted my current school schedule.<br>
+</p>
+<img src="img/school picture.JPG" height="614" width="600">
+<img src="img/hehs.JPG" height="400" width="780">
+<p style="font-size: 20px">To Learn More About HEHS <input type="button" value="Click Here" onclick="newDoc()"></p>
+<!-- thanks w3schools for button tips-->
+</div>
+</body>
+</html>
